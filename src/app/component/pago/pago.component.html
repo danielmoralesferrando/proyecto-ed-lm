@@ -1,1 +1,70 @@
-<p>pago works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra de productos</title>
+  <link rel="stylesheet" href="pago.component.css">
+</head>
+<body>
+  <h1>Detalles de compra</h1>
+  
+  <!-- Tabla de productos -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Número de producto</th>
+        <th>Nombre del producto</th>
+        <th>Cantidad</th>
+        <th>Precio unitario</th>
+        <th>Precio total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí puedes llenar la tabla con los datos de tus productos -->
+      <tr>
+        <td>1</td>
+        <td>Producto A</td>
+        <td>2</td>
+        <td>$10.00</td>
+        <td>$20.00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Producto B</td>
+        <td>1</td>
+        <td>$15.00</td>
+        <td>$15.00</td>
+      </tr>
+      <!-- Agrega más filas según sea necesario -->
+    </tbody>
+  </table>
+
+  <br>
+
+  <!-- Formulario de pago -->
+  <h2>Detalles de pago</h2>
+  <form action="procesar_pago.php" method="post">
+    <label for="cuenta_bancaria">Cuenta bancaria:</label>
+    <input type="text" id="cuenta_bancaria" name="cuenta_bancaria" required><br><br>
+
+    <label for="fecha_vencimiento">Fecha de vencimiento:</label>
+    <input type="text" id="fecha_vencimiento" name="fecha_vencimiento" required><br><br>
+
+    <label for="codigo_seguridad">Código de seguridad:</label>
+    <input type="text" id="codigo_seguridad" name="codigo_seguridad" required><br><br>
+
+    <!-- Aquí podrías incluir opciones para seleccionar el método de pago -->
+    <label for="metodo_pago">Método de pago:</label>
+    <select id="metodo_pago" name="metodo_pago">
+      <option value="tarjeta_credito">Tarjeta de crédito</option>
+      <option value="tarjeta_debito">Tarjeta de débito</option>
+      <option value="transferencia">Transferencia bancaria</option>
+      <option value="paypal">PayPal</option>
+    </select><br><br>
+
+    <input type="submit" value="Finalizar pago">
+  </form>
+</body>
+</html>
+
