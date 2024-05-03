@@ -5,6 +5,7 @@ import { LoginComponent } from './component/login/login.component';
 import { RegistroComponent } from './component/registro/registro.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ProductosComponent } from './component/productos/productos.component';
+import { CatalogoComponent } from './component/catalogo/catalogo.component';
 
 export const routes: Routes = [
     {path: 'home', title: 'Home',component: HomeComponent},
@@ -12,5 +13,6 @@ export const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegistroComponent},
     {path: 'productos', component: ProductosComponent},
+    {path: 'catalogo', component: CatalogoComponent},
     {path: '**', component: PageNotFoundComponent}
 ];
