@@ -11,6 +11,6 @@ export class DataService {
   constructor( private http: HttpClient) { }
 
   getProduct(): Observable<RootInterface>{
-    return this.http.get<RootInterface>('./assets/data/data.json')
+    return this.http.get<RootInterface>('./assets/data/productos.json')
   }
 }
