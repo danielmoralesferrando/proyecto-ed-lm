@@ -7,19 +7,19 @@
             "boton": "Comprar"
         },
         {
-            "image": "./img/destacado1.jpg",
+            "image": "assets/img/destacado1.jpg",
             "titulo": "Bote de proteinas 2kg",
             "precio": "$40",
             "boton": "Comprar"
         },
         {
-            "image": "./img/creatina.jpg",
+            "image": "assets/img/creatina.jpg",
             "titulo": "Creatina",
             "precio": "$35.99",
             "boton": "Comprar"
         },
         {
-            "image": "./img/destacado2.jpg",
+            "image": "assets/img/destacado2.jpg",
             "titulo": "Paquete barras de proteinas",
             "precio": "$10.45",
             "boton": "Comprar"
