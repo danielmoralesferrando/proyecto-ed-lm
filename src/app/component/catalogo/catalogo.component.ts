@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DataService } from '../../data/data.service';
-import { subscribe } from 'diagnostics_channel';
 import { productos } from '../../common/productos';
 import { CommonModule } from '@angular/common';
+import { Producto } from '../../common/productos';
 
 @Component({
   selector: 'app-catalogo',
@@ -17,7 +17,8 @@ import { CommonModule } from '@angular/common';
 export class CatalogoComponent implements OnInit{
 
 
-  productos!: productos;
+  productosList!: productos;
+  productoItem!: Producto;
   constructor(private dataService: DataService){}
 
   ngOnInit(): void {
@@ -26,10 +27,10 @@ export class CatalogoComponent implements OnInit{
 
   loadProductos(){
 
-    this.dataService.getProduct().subscribe({
+    this.dataService.getProducts().subscribe({
       next: (data) =>{
         console.log(data)
-        this.productos = data
+        this.productosList = data
       },
       error: err =>{
         console.log(err)
@@ -43,7 +44,7 @@ export class CatalogoComponent implements OnInit{
       {
         next: (data) =>{
           console.log(data)
-          this.productos = data
+          this.productoItem = data
         },
         error: err => {
           console.log(err)
