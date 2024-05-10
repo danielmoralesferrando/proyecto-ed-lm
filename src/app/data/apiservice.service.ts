@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Rickymorty } from '../../../../../../MiPrimeraApp/src/app/common/rickymorty';
-import { PersonajeONE } from '../../../../../../MiPrimeraApp/src/app/common/personaje-one';
+import { Rickymorty } from '../common/rickymorty';
+import { PersonajeONE } from '../common/personaje-one';
 
 @Injectable({
   providedIn: 'root'
