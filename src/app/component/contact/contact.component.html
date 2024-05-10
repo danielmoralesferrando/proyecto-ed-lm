@@ -7,30 +7,40 @@
     <link rel="stylesheet" href="contact.component.css">
 </head>
 <body>
-    <div class="container">
-        <div class="left-column">
-            <h2>Equipo de Trabajo</h2>
-            <p>El equipo de trabajo está formado por profesionales altamente capacitados en diversas áreas, comprometidos con brindar soluciones de calidad a nuestros clientes.</p>
-        </div>
-        <div class="right-column">
-            <h2>Foto del Equipo</h2>
-            <img src="" alt="Foto del equipo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 text-center">
+                <h2>Equipo de Trabajo</h2>
+                <p>El equipo de trabajo está formado por profesionales altamente capacitados en diversas áreas, comprometidos con brindar soluciones de calidad a nuestros clientes. Nuestro compromiso con la excelencia y la innovación nos impulsa a estar siempre actualizados y a la vanguardia en nuestras respectivas disciplinas, garantizando así resultados sobresalientes en cada proyecto en el que nos involucramos.</p>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <div style="text-align: center;">
+                    <h2>Foto del Equipo</h2>
+                    <img src="assets/img/logo-vital.png" width="250" height="175" alt="Foto del equipo" class="img-fluid">
+                </div>
+            </div>
         </div>
     </div>
     
-    <div class="container">
-        <div class="left-column">
-            <h2>Sección de Contacto</h2>
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <h2>Sección de Contacto</h2>
+                <form action="#" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>
+
+
+
+
 </html>

@@ -1,23 +1,25 @@
-[
 {
-    "image": "./img/proteina.jpg",
-    "titulo": "Proteinas",
-    "precio": "$29.99"
-},
-{
-    "image": "./img/destacado1.jpg",
-    "titulo": "Bote de proteinas 2kg",
-    "precio": "$40"
-},
-{
-    "image": "./img/creatina.jpg",
-    "titulo": "Creatina",
-    "precio": "$35.99"
-},
-{
-    "image": "./img/destacado2.jpg",
-    "titulo": "Paquete barras de proteinas",
-    "precio": "$10.45"
+    "Productos" : [
+        {
+            "image": "assets/img/proteina.jpg",
+            "titulo": "Proteinas",
+            "precio": "$29.99"
+        },
+        {
+            "image": "assets/img/destacado1.jpg",
+            "titulo": "Bote de proteinas 2kg",
+            "precio": "$40"
+        },
+        {
+            "image": "assets/img/creatina.jpg",
+            "titulo": "Creatina",
+            "precio": "$35.99"
+        },
+        {
+            "image": "assets/img/destacado2.jpg",
+            "titulo": "Paquete barras de proteinas",
+            "precio": "$10.45"
+        }
+    ]
 }
-]
 

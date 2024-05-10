@@ -1,5 +1,5 @@
-export interface Productos {
-    image: string;
-    titulo: string;
-    precio: string;
+export interface productos {
+  image: string
+  titulo: string
+  precio: string
   }
