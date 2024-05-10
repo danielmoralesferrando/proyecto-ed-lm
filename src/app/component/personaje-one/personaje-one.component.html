@@ -1,0 +1,49 @@
+<div class="content-fluid">
+
+    <div class="row justify-content-center">
+        <div class="col-2" (click)="CambiaChar(personajeONE.id-1)">
+          <button class="btn btn-primary" style="background-color: #016A70">Anterior</button>
+        </div>
+        <div class="col-2" (click)="CambiaChar(1)">
+          <button class="btn btn-primary" style="background-color: #016A70">First</button>
+        </div>
+       
+        <!-- este es el div de la tarjeta -->
+      <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{personajeONE.image}}" class="card-img-top" alt="..." width="200px">
+                <div class="card-body">
+                  <h5 class="card-title">{{personajeONE.name}}</h5>
+                  <p class="card-text">{{personajeONE.id}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{personajeONE.gender}}</li>
+                  <li class="list-group-item">{{personajeONE.created}}</li>
+                  <li class="list-group-item">{{personajeONE.location.name}}</li>
+                  <li class="list-group-item">{{personajeONE.location.url}}</li>
+                  <li class="list-group-item">{{personajeONE.origin.name}}</li>
+                  <li class="list-group-item">{{personajeONE.origin.url}}</li>
+                  <li class="list-group-item">
+                    <ul>
+                        @for (episodio of personajeONE.episode; track episodio) {
+                            <li>{{episodio}}</li>
+                        }
+                    </ul>
+                  </li>
+                  <li class="list-group-item">{{personajeONE.species}}</li>
+                  <li class="list-group-item">{{personajeONE.status}}</li>
+                  <li class="list-group-item">{{personajeONE.type}}</li>
+                  <li class="list-group-item">{{personajeONE.url}}</li>
+                 
+                </ul>
+              </div>
+        </div>
+
+        <div class="col-2" (click)="CambiaChar(826)">
+          <button class="btn btn-primary" style="background-color: #016A70">Last</button>
+        </div>
+        <div class="col-2" (click)="CambiaChar(personajeONE.id +1)">
+          <button class="btn btn-primary" style="background-color: #016A70">Siguiente</button>
+        </div>
+    </div>
+</div>

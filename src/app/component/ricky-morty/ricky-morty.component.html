@@ -1,0 +1,72 @@
+<div class="content-fluid">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h2>Data Rick y Morty</h2>
+      <h3>{{ personajesRyM.info.count }}</h3>
+      <h3>{{ personajesRyM.info.next }}</h3>
+      <h3>{{ personajesRyM.info.pages }}</h3>
+      <h3>{{ personajesRyM.info.prev }}</h3>
+    </div>
+    <!-- Paginación -->
+     <div class="col-12">
+            <button class="btn btn-primary mx-3  my-3 p-2" (click)="CambiaPagina('Anterior')" style="background-color: #016A70">Anterior</button>
+            <button class="btn btn-primary mx-3  my-3 p-2" (click)="CambiaPagina('Primera')" style="background-color: #016A70">Primera</button>
+            <button class="btn btn-primary mx-3  my-3 p-2" (click)="CambiaPagina('Ultima')" style="background-color: #016A70">Última</button>
+            <button class="btn btn-primary mx-3  my-3 p-2" (click)="CambiaPagina('Siguiente')" style="background-color: #016A70">Siguiente</button>    
+        </div> 
+    <!-- <div class="div-12">
+      <button class="btn btn-secondary mx-3 my-3 p-2" (click)="CambiaPagina('Anterior')" >Anterior</button>
+      <button class="btn btn-secondary mx-3 my-3 p-2" (click)="CambiaPagina('Primera')" >1</button>
+      <button class="btn btn-secondary mx-3 my-3 p-2">2</button>  //Agregar la de 2
+      <button class="btn btn-secondary mx-3 my-3 p-2">...</button>
+      <button class="btn btn-secondary mx-3 my-3 p-2" (click)="CambiaPagina('Penultima')">
+        {{ this.personajesRyM.info.pages - 1 }}
+      </button>
+      <button class="btn btn-secondary mx-3 my-3 p-2" (click)="CambiaPagina('Ultima')">
+        {{ this.personajesRyM.info.pages }}
+      </button>
+      <button class="btn btn-secondary mx-3 my-3 p-2" (click)="CambiaPagina('Siguiente')">Siguiente</button>
+    </div> -->
+  </div>
+  <div class="row justify-content-space-around">
+    @for (personaje of personajesRyM.results; track personaje) {
+    <div class="col-3">
+      <div
+        class="card"
+        style="width: 18rem"
+        [routerLink]="'/personajeONE/' + personaje.id"
+      >
+        <img
+          src="{{ personaje.image }}"
+          class="card-img-top"
+          alt="..."
+          width="200px"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ personaje.name }}</h5>
+          <p class="card-text">{{ personaje.id }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{ personaje.gender }}</li>
+          <li class="list-group-item">{{ personaje.created }}</li>
+          <li class="list-group-item">{{ personaje.location.name }}</li>
+          <li class="list-group-item">{{ personaje.location.url }}</li>
+          <li class="list-group-item">{{ personaje.origin.name }}</li>
+          <li class="list-group-item">{{ personaje.origin.url }}</li>
+          <li class="list-group-item">
+            <ul>
+              @for (episodio of personaje.episode; track episodio) {
+              <li>{{ episodio }}</li>
+              }
+            </ul>
+          </li>
+          <li class="list-group-item">{{ personaje.species }}</li>
+          <li class="list-group-item">{{ personaje.status }}</li>
+          <li class="list-group-item">{{ personaje.type }}</li>
+          <li class="list-group-item">{{ personaje.url }}</li>
+        </ul>
+      </div>
+    </div>
+    }
+  </div>
+</div>
