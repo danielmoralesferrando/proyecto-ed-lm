@@ -12,9 +12,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './catalogo.component.html',
   styleUrl: './catalogo.component.css'
 })
-<<<<<<< HEAD
-export class CatalogoComponent{
-=======
+
+
 export class CatalogoComponent implements OnInit{
 
 
@@ -55,5 +54,5 @@ export class CatalogoComponent implements OnInit{
       }
     )
   }
->>>>>>> ad4da7106bbea18e09e3e533ad771b8088fbcb07
+
 }
