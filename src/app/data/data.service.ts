@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Productos } from '../common/productos';
+import { productos } from '../common/productos';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { Productos } from '../common/productos';
 export class DataService {
   constructor( private http: HttpClient) { }
 
-  getProduct(): Observable<Productos>{
-    return this.http.get<Productos>('./assets/data/productos.json')
+  getProduct(): Observable<any>{
+    return this.http.get('./assets/data/productos.json')
   }
 }

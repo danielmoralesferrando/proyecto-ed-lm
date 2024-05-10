@@ -2,19 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DataService } from '../../data/data.service';
 import { subscribe } from 'diagnostics_channel';
-import { Productos } from '../../common/productos';
+import { productos } from '../../common/productos';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-catalogo',
   standalone: true,
-  imports: [RouterLink],
+  imports: [CommonModule,RouterLink],
   templateUrl: './catalogo.component.html',
   styleUrl: './catalogo.component.css'
 })
 export class CatalogoComponent implements OnInit{
 
 
-  Productos!: Productos;
+  productos: productos[] = [];
   constructor(private dataService: DataService){}
 
   ngOnInit(): void {
@@ -26,7 +27,7 @@ export class CatalogoComponent implements OnInit{
     this.dataService.getProduct().subscribe({
       next: (data) =>{
         console.log(data)
-        this.Productos = data
+        this.productos = data
       },
       error: err =>{
         console.log(err)
@@ -40,7 +41,7 @@ export class CatalogoComponent implements OnInit{
       {
         next: (data) =>{
           console.log(data)
-          this.Productos = data
+          this.productos = data
         },
         error: err => {
           console.log(err)
