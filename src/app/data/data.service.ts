@@ -10,6 +10,6 @@ export class DataService {
   constructor( private http: HttpClient) { }
 
   getProduct(): Observable<Productos>{
-    return this.http.get<Productos>('./assets/data/catalogo.json')
+    return this.http.get<Productos>('./assets/data/productos.json')
   }
 }

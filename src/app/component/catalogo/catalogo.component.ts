@@ -14,7 +14,7 @@ import { Productos } from '../../common/productos';
 export class CatalogoComponent implements OnInit{
 
 
-  catalogo!: Productos;
+  Productos!: Productos;
   constructor(private dataService: DataService){}
 
   ngOnInit(): void {
@@ -26,7 +26,7 @@ export class CatalogoComponent implements OnInit{
     this.dataService.getProduct().subscribe({
       next: (data) =>{
         console.log(data)
-        this.catalogo = data
+        this.Productos = data
       },
       error: err =>{
         console.log(err)
@@ -40,7 +40,7 @@ export class CatalogoComponent implements OnInit{
       {
         next: (data) =>{
           console.log(data)
-          this.catalogo = data
+          this.Productos = data
         },
         error: err => {
           console.log(err)
