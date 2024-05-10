@@ -1,15 +1,17 @@
-<div class="row justitfy-content-center align-items:center" style="background-color: #F4F6F7; align-items:center;  margin-top:-70px; padding-bottom: 100px; padding-left: 150px;">
-    
-@for (item of productosList.Productos; track $index) {
-    <div class="col-md-4">
-        <div class="" style="width: 18rem;">
-            <div class="p-3" style="height: 300px; overflow: hidden;"> <img [src]="item.image" class="card-img-top" alt="..."></div>
-            <div class="card-body">
-              <h5 class="card-title">{{item.titulo}}</h5>
-              <h5 class="card-title">{{item.precio}}</h5>
-              <a href="#" class="btn btn-primary" routerLink="/productos" routerLinkActive="active">{{item.boton}}</a>
-            </div>
+<div class="row justify-content-center align-items-center" style="background-color: #F4F6F7; margin-top: -70px; padding-bottom: 100px; padding-left: 150px;">
+
+    @for (item of productosList.Productos; track $index) {
+      <div class="col-md-4" style="padding: 0;">
+        <div class="card" style="width: 18rem; margin: 0;">
+          <img [src]="item.image" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{item.titulo}}</h5>
+            <h5 class="card-title">{{item.precio}}</h5>
+            <a href="#" class="btn btn-primary" routerLink="/productos" routerLinkActive="active">{{item.boton}}</a>
           </div>
+        </div>
       </div>
-}
-</div>
+    }
+    
+  </div>
+  
