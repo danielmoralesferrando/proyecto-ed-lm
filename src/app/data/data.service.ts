@@ -9,7 +9,7 @@ import { productos } from '../common/productos';
 export class DataService {
   constructor( private http: HttpClient) { }
 
-  getProduct(): Observable<any>{
-    return this.http.get('./assets/data/productos.json')
+  getProduct(): Observable<productos>{
+    return this.http.get<productos>('./assets/data/productos.json')
   }
 }

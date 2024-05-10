@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 export class CatalogoComponent implements OnInit{
 
 
-  productos: productos[] = [];
+  productos!: productos;
   constructor(private dataService: DataService){}
 
   ngOnInit(): void {
