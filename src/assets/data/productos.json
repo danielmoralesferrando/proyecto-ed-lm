@@ -23,7 +23,13 @@
             "titulo": "Paquete barras de proteinas",
             "precio": "$10.45",
             "boton": "Comprar"
+        },{
+            "image": "assets/img/creatina.jpg",
+            "titulo": "wWebCreatina",
+            "precio": "$200.45",
+            "boton": "Comprar"
         }
+
     ]
 }
 
